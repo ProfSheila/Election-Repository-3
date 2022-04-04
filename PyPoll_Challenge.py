@@ -6,9 +6,25 @@ import csv
 import os
 
 # Add a variable to load a file from a path.
-file_to_load = os.path.join("..", "Resources", "election_results.csv")
+file_to_load = os.path.join("Resources", "election_results.csv")
 # Add a variable to save the file to a path.
 file_to_save = os.path.join("Analysis", "election_analysis.txt")
+
+#Open the election results and read the file
+with open(file_to_load) as election_data:
+
+      #To do: read and analyze the data here.
+    #Read the file object iwth the reader function.
+    file_reader = csv.reader(election_data)
+
+
+    #Print each row in the CSV file.
+    for row in file_reader:
+        print(row)
+
+
+
+
 
 # Initialize a total vote counter.
 total_votes = 0
